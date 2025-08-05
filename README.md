@@ -25,26 +25,42 @@ strong cryptographic guarantees, combining the efficiency of AES with the securi
 ## How To Install 
 
 - Clone:
-  git clone
 
- - change  dir:
-   cd
-
+```sh
+https://github.com/me-homeman/Simple-hybrid-encryption-.git
+```
+- change  dir:
+  
+```sh
+cd Simple-hybrid-encryption-
+```
 - Create the virtual environment:
-    python -m venv myenv
 
+```sh
+python -m venv myenv
+```
 - Activate the virtual environment:
-          source myenv/bin/activate
+
+```sh
+source myenv/bin/activate  
+```
 
 - Install packages:
-        pip install cryptography
 
- - start the file:
-    python
+```sh
+ pip install cryptography 
+```
+       
+
+- start the file:
+```sh
+ python 'Hybrid Encryption Tool.py' run
+```
    
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🔒 Encrypt a Message
+#🔒 Encrypt a Message
+
 Input your plaintext message.
 
 Outputs a combined encrypted string (in hex), including:
@@ -57,14 +73,16 @@ AES-encrypted data
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🔓 Decrypt a Message
+#🔓 Decrypt a Message
+
 Paste the previously generated combined hex string.
 
 Outputs the original plaintext message.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📦 Combined Format
+#📦 Combined Format
+
 The encrypted message is structured as:
 
 pgsql
@@ -77,7 +95,8 @@ All fields are serialized and represented in a single hexadecimal string for por
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🔐 Cryptographic Details
+#🔐 Cryptographic Details
+
 RSA-4096: Provides ~256-bit security level
 
 AES-256-CBC: Symmetric encryption with a 256-bit key and a 128-bit IV
@@ -88,7 +107,8 @@ PKCS7 Padding: Ensures data is block-aligned for AES-CBC
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⚠️ Disclaimer
+#⚠️ Disclaimer
+
 This tool is for educational and demonstration purposes. For production-grade security, always follow industry best practices and consult with a cryptography expert.
 
 
