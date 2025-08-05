@@ -24,25 +24,62 @@ strong cryptographic guarantees, combining the efficiency of AES with the securi
 
 ## How To Install 
 
-- Clone
+- Clone:
   git clone
 
- - change  dir
+ - change  dir:
    cd
 
 - Create the virtual environment:
     python -m venv myenv
 
-- Activate the virtual environment
+- Activate the virtual environment:
           source myenv/bin/activate
 
-- Install packages
+- Install packages:
         pip install cryptography
 
- - start the file
+ - start the file:
     python  
 
+🔒 Encrypt a Message
+Input your plaintext message.
 
+Outputs a combined encrypted string (in hex), including:
+
+Encrypted AES-256 key
+
+AES IV
+
+AES-encrypted data
+
+🔓 Decrypt a Message
+Paste the previously generated combined hex string.
+
+Outputs the original plaintext message.
+
+📦 Combined Format
+The encrypted message is structured as:
+
+pgsql
+Copy
+Edit
+[AES_KEY_LENGTH(2 bytes)][Encrypted AES-256 Key]
+[IV_LENGTH(2 bytes)][IV]
+[Encrypted Data]
+All fields are serialized and represented in a single hexadecimal string for portability.
+
+🔐 Cryptographic Details
+RSA-4096: Provides ~256-bit security level
+
+AES-256-CBC: Symmetric encryption with a 256-bit key and a 128-bit IV
+
+OAEP Padding with SHA-256: Secures RSA encryption of the AES key
+
+PKCS7 Padding: Ensures data is block-aligned for AES-CBC
+
+⚠️ Disclaimer
+This tool is for educational and demonstration purposes. For production-grade security, always follow industry best practices and consult with a cryptography expert.
 
 
 
