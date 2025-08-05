@@ -27,7 +27,7 @@ strong cryptographic guarantees, combining the efficiency of AES with the securi
 - Clone:
 
 ```sh
-https://github.com/me-homeman/Simple-hybrid-encryption-.git
+git clone https://github.com/me-homeman/Simple-hybrid-encryption-.git
 ```
 - change  dir:
   
