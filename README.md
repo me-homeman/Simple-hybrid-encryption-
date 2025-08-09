@@ -39,10 +39,15 @@ cd Simple-hybrid-encryption-
 ```sh
 python -m venv myenv
 ```
-- Activate the virtual environment:
+- Activate the virtual environment in linux:
 
 ```sh
 source myenv/bin/activate  
+```
+- Activate the virtual environment in windowns:
+
+```sh
+myenv\Scripts\activate  
 ```
 
 - Install packages:
